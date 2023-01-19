@@ -11,6 +11,10 @@ import org.junit.jupiter.api.Test;
 class JudgeUtilsTest {
 	
 	private JudgeUtils target = new JudgeUtils();
+	private JudgeUtils targetpay = new JudgeUtils();
+	private JudgeUtils targetplay = new JudgeUtils();
+	
+			
 	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	// ********************************
@@ -197,7 +201,7 @@ class JudgeUtilsTest {
 		// 事前処理(Mock)
 				Calendar cal = Calendar.getInstance();
 				cal.clear();
-				cal.set(Calendar.YEAR, 2017);
+				cal.set(Calendar.YEAR, 2018);
 				cal.set(Calendar.MONTH, Calendar.APRIL);
 				cal.set(Calendar.DAY_OF_MONTH, 01);
 				Date date = cal.getTime();
@@ -211,7 +215,7 @@ class JudgeUtilsTest {
 				Date birthDay = birthcal.getTime();
 
 				// 実行
-				boolean actual = target.isRegisterdAge(birthDay);
+				boolean actual = targetplay.isRegisterdAge(birthDay);
 
 				//結果
 				assertTrue(actual);
